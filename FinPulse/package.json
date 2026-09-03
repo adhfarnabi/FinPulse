@@ -1,0 +1,19 @@
+{
+  "name": "finpulse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FinPulse — India-focused MERN + Kafka financial analytics platform",
+  "workspaces": [
+    "client",
+    "server",
+    "pipeline"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "test:pipeline": "npm run test --workspace pipeline",
+    "test:server": "npm run test --workspace server",
+    "build:pipeline": "npm run build --workspace pipeline",
+    "build:server": "npm run build --workspace server",
+    "build:client": "npm run build --workspace client"
+  }
+}

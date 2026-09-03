@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #0B0F0D;
+  color: #EEEAE0;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* tabular figures for anything showing a price/number, so columns of digits align */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+::selection {
+  background-color: #D98E2B;
+  color: #0B0F0D;
+}
+
+:focus-visible {
+  outline: 2px solid #D98E2B;
+  outline-offset: 2px;
+}

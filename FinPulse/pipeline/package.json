@@ -1,0 +1,30 @@
+{
+  "name": "finpulse-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FinPulse Kafka producer + consumer + event-detection pipeline",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "producer": "node dist/pipeline/src/producer/index.js",
+    "consumer": "node dist/pipeline/src/consumer/index.js",
+    "dev:producer": "ts-node-dev --respawn --transpile-only src/producer/index.ts",
+    "dev:consumer": "ts-node-dev --respawn --transpile-only src/consumer/index.ts",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "mongoose": "^8.6.0",
+    "dotenv": "^16.4.5",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "ts-node-dev": "^2.0.0",
+    "@types/node": "^20.14.10",
+    "@types/uuid": "^9.0.8",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.4",
+    "@types/jest": "^29.5.12"
+  }
+}
